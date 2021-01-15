@@ -18,7 +18,7 @@
             <li><a href="#queEsGit">Que es Git?</a></li>
             <li><a href="#porQueGit">Por que utilizar Git?</a></li>
             <li><a href="#comandosGit">Listado de comandos basicos en Git</a></li>
-            <li>Creacion de un proyecto web utilizando git</li>
+            <li><a href="#creacionProyecto">Creacion de un proyecto utilizando Git</a></li>
 
           </ol>
         </div>
@@ -133,6 +133,113 @@
                 <p>Fusiona la rama actual con la rama especificada.</p>
               </li>
             </ul>
+          </section>
+          <section id="creacionProyecto">
+            <h2>5 - Creacion de un proyecto con Git</h2>
+            <hr>
+            <br>
+            <p>
+              Para comenzar crearemos el directorio donde ira nuestro proyecto.
+              Desde git bash ejecutamos el siguiente comando:
+            </p>
+            <br>
+            <div class="code-line">
+              <code>mkdir "ProyectoGitDespliegue"</code>
+            </div>
+            <br>
+            <p>
+              Crearemos un archivo README donde escribiremos la informacion
+              importante relativa a nuestro proyecto:
+            </p>
+            <br>
+            <div class="code-line">
+              <code>echo "# Proyecto Despliegue" >> README.md</code>
+            </div>
+            <br>
+            <p>
+              Ahora inicializaremos el repositorio y añadiremos nuestro archivo
+              README:
+            </p>
+            <br>
+            <div class="code-line">
+              <code>git init</code>
+              <br>
+              <code>git add README.md</code>
+            </div>
+            <br>
+            <p>
+              A continuacion realizaremos nuestro primer commit:
+            </p>
+            <br>
+            <div class="code-line">
+              <code>git commit -m "first commit"</code>
+            </div>
+            <br>
+            <p>
+              Como nuestra intencion es almacenar nuestro repositorio de manera
+              remota, deberemos elegir que plataforma deseamos usar para subir
+              nuestro codigo, en este caso utilizaremos GitHub, pero podriamos
+              usar otras alternativas como GitLab, BitBucket, etc.
+            </p>
+            <br>
+            <p>
+              Para iniciar el repositorio remoto deberemos entrar a GitHub,
+              registrarnos y seleccionar la opcion que nos permite crear un
+              nuevo repositorio. GitHub nos proporcionara un enlace al
+              repositorio para que podamos vincularlo con nuestro repositorio
+              local.
+            </p>
+            <br>
+            <p>
+              Ahora con el comando git remote vincularemos nuestro repositorio
+              remoto con el local y  subimos nuestra rama master (-u trackeara
+              nuestra rama, esto afectara al git pull):
+            </p>
+            <br>
+            <div class="code-line">
+              <code>git remote add origin https://github.com/Trejerum/ProyectoDespliegue.git</code>
+              <br>
+              <code>git push -u origin master</code>
+            </div>
+            <br>
+            <p>
+              De esta forma ya tendriamos nuestra rama con el primer commit
+              guardada tanto de manera local como remota. Ahora para continuar
+              con el desarrollo crearemos una rama de desarrollador donde poder
+              efectuar cambios sin que afecten a la rama principal (master) y
+              nos moveremos a ella:
+            </p>
+            <br>
+            <div class="code-line">
+              <code>git branch dev-diego</code>
+              <br>
+              <code>git checkout dev-diego</code>
+            </div>
+            <br>
+            <p>
+              A partir de este punto el desarrollo consistiria en introducir
+              cambios, añadirlos, commitearlos y subirlos a nuestra rama en
+              remoto.
+            </p>
+            <br>
+            <p>
+              Finalmente cuando tengamos una version probada y queramos
+              pasarla a la rama principal (master) deberemos fusionar la rama
+              principal con la nuestra. Para esto primero nos bajariamos las
+              ultimas versiones de los commits del repositorio remoto, nos
+              moveriamos a la rama master y ejecutariamos un merge:
+            </p>
+            <br>
+            <div class="code-line">
+              <code>git fetch master</code>
+              <br>
+              <code>git checkout master</code>
+              <br>
+              <code>git pull</code>
+              <br>
+              <code>git merge dev-diego</code>
+            </div>
+            <br>
           </section>
         </div>
       </div>
