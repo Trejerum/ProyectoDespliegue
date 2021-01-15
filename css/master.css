@@ -23,6 +23,7 @@ h2 {
   width: 800px;
   padding: 20px;
   margin-bottom: 100px;
+  margin-top: 50px;
   display: inline-block;
   text-align: left;
   background-color: white;
@@ -39,6 +40,7 @@ h2 {
   padding-left: 35px;
   margin: 0 auto;
   margin-top: 30px;
+  color: #66ccff;
 }
 
 .content-table ol{
@@ -47,6 +49,12 @@ h2 {
 
 .content-table li {
   margin-top: 5px;
+}
+
+.content-table a {
+  text-decoration: none;
+  outline: none;
+  color: #66ccff;
 }
 
 .content {
