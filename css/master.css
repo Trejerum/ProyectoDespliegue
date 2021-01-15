@@ -4,17 +4,25 @@
   margin: 0;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
 .proyectoDespliegue {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: white;
+  background-color: #333333;
 }
 
 .container {
-  width: 700px;
-  padding: 5px;
-  margin-bottom: 200px;
+  width: 800px;
+  padding: 20px;
+  margin-bottom: 100px;
   display: inline-block;
   text-align: left;
   background-color: white;
@@ -25,11 +33,20 @@
 }
 
 .content-table {
-  background-color: green;
-  width: 700px;
+  background-color: #f2f2f2;
+  width: 750px;
   padding: 20px;
   padding-left: 35px;
+  margin: 0 auto;
   margin-top: 30px;
+}
+
+.content-table ol{
+  font-size: 1.1em;
+}
+
+.content-table li {
+  margin-top: 5px;
 }
 
 .content {
