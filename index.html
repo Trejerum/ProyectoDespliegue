@@ -17,12 +17,14 @@
             <li><a href="#introduccion">Introduccion</a></li>
             <li><a href="#queEsGit">Que es Git?</a></li>
             <li><a href="#porQueGit">Por que utilizar Git?</a></li>
+            <li><a href="#comandosGit">Listado de comandos basicos en Git</a></li>
             <li>Creacion de un proyecto web utilizando git</li>
+
           </ol>
         </div>
         <div class="content">
-          <section>
-            <h2 id="introduccion">1 - Introduccion</h2>
+          <section id="introduccion">
+            <h2>1 - Introduccion</h2>
             <br>
             <p>
               Este proyecto pretende mostar que es Git y porque su uso es muy
@@ -39,13 +41,13 @@
               </a>
             </p>
             <br>
-            <div class="code">
+            <div class="code-line">
               <code>git init</code><br>
               <code>git init</code>
             </div>
           </section>
-          <section>
-            <h2 id="queEsGit">2 - Que es Git?</h2>
+          <section id="queEsGit">
+            <h2>2 - Que es Git?</h2>
             <br>
             <p>
               Git es un sistema de control de versiones creado por Linus
@@ -53,8 +55,8 @@
               los cambios realizados en un proyecto de desarrollo de software.
             </p>
           </section>
-          <section>
-            <h2 id="porQueGit">3 - Por que utilizar Git</h2>
+          <section id="porQueGit">
+            <h2>3 - Por que utilizar Git</h2>
             <br>
             <p>
               Git nos permite hacer un seguimiento de los cambios que se han realizado en un
@@ -67,6 +69,59 @@
               potente, agil y de software libre. Todas estas caracteristicas
               hacen de Git un sistema de control de versiones perfecto para
               llevar a cabo nuestros proyectos </p>
+          </section>
+          <section id="comandosGit">
+            <h2>4 - Listado de comandos basicos en Git</h2>
+            <br>
+            <ul>
+              <li>
+                <code>git init</code>
+                <p>Inicializa un repositorio.</p>
+              </li>
+              <br>
+              <li>
+                <code>git add &#60;nombre_archivo&#62;</code>
+                <p>Comienza a trackear el archivo indicado</p>
+              </li>
+              <br>
+              <li>
+                <code>git status</code>
+                <p>Muestra el estado de la rama, con los cambios que hay que commitear</p>
+              </li>
+              <br>
+              <li>
+                <code>git commit -m "message"</code>
+                <p>Realiza un commit y lo almacena con el mensaje introducido.</p>
+                <p>Confirma los cambios realizados.</p>
+              </li>
+              <br>
+              <li>
+                <code>git fetch</code>
+                <p>Conecta con el repositorio remoto para ver los cambios pero
+                  no llega a cambiar nada en el repositorio local.</p>
+              </li>
+              <br>
+              <li>
+                <code>git pull</code>
+                <p>Trae cambios de un repositorio remoto.</p>
+              </li>
+              <br>
+              <li>
+                <code>git push</code>
+                <p>Sube los cambios realizados a un repositorio remoto.</p>
+              </li>
+              <br>
+              <li>
+                <code>git branch</code>
+                <p>Lista las ramas, tambien serviria para crear un rama
+                  poniendo el nombre delante</p>
+              </li>
+              <br>
+              <li>
+                <code>git merge &#60;nombre_rama&#62;</code>
+                <p>Fusiona la rama actual con la rama especificada.</p>
+              </li>
+            </ul>
           </section>
         </div>
       </div>
